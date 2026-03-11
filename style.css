@@ -1,0 +1,1991 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', 'SimHei', sans-serif;
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+    width: 100%;
+    max-width: 680px;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 30px;
+    padding: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 开始页面 */
+.start-screen {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.title {
+    font-size: 36px;
+    color: #2d3436;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #636e72;
+    margin-bottom: 25px;
+}
+
+.character-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin: 35px 0;
+}
+
+.bear {
+    text-align: center;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.bear-xiongda {
+    animation-delay: 0s;
+}
+
+.bear-xionger {
+    animation-delay: 0.5s;
+}
+
+.bear-body {
+    font-size: 85px;
+    display: block;
+}
+
+.bear-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e17055;
+    margin-top: 12px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.big-btn {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    color: white;
+    border: none;
+    padding: 18px 55px;
+    font-size: 26px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(116, 185, 255, 0.5);
+    transition: all 0.3s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.big-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 15px rgba(116, 185, 255, 0.5);
+}
+
+/* 诗词学习页面 */
+.poem-screen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* 动画场景 */
+.animation-scene {
+    height: 220px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.8s ease;
+}
+
+.animation-scene > div {
+    font-size: 36px;
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+}
+
+/* 当前诗句展示 */
+.current-line {
+    background: linear-gradient(135deg, #fff9e6 0%, #ffecd2 100%);
+    border-radius: 20px;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.current-line .line-pinyin {
+    font-size: 18px;
+    color: #b2bec3;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.current-line .line-text {
+    font-size: 32px;
+    color: #2d3436;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* 诗词卡片 */
+.poem-card {
+    background: linear-gradient(135deg, #fff9e6 0%, #ffecd2 100%);
+    border-radius: 20px;
+    padding: 18px 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.poem-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.poem-title {
+    font-size: 26px;
+    color: #2d3436;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.poem-title .pinyin {
+    font-size: 13px;
+    color: #b2bec3;
+    font-weight: normal;
+}
+
+.poem-title .chinese {
+    font-size: 30px;
+    font-weight: bold;
+    color: #e17055;
+}
+
+.poem-author {
+    font-size: 17px;
+    color: #636e72;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.poem-author .pinyin {
+    font-size: 11px;
+    color: #b2bec3;
+}
+
+.poem-author .chinese {
+    font-size: 15px;
+}
+
+.poem-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fdcb6e, transparent);
+    margin: 15px 0;
+}
+
+.poem-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.poem-line {
+    text-align: center;
+    padding: 10px;
+    border-radius: 12px;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.poem-line.active {
+    background: rgba(253, 203, 110, 0.4);
+    transform: scale(1.05);
+    border: 2px solid #e17055;
+}
+
+.line-pinyin {
+    font-size: 13px;
+    color: #b2bec3;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.line-text {
+    font-size: 20px;
+    color: #2d3436;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* 背诵提示 */
+.recite-prompt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.prompt-content {
+    background: white;
+    padding: 45px 35px;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 90%;
+    width: 380px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.recite-icon {
+    font-size: 90px;
+    margin-bottom: 25px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.prompt-content h3 {
+    font-size: 30px;
+    color: #2d3436;
+    margin-bottom: 10px;
+}
+
+.prompt-content p {
+    font-size: 18px;
+    color: #636e72;
+    margin-bottom: 30px;
+}
+
+/* 评分结果 */
+.score-result {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.score-content {
+    background: white;
+    padding: 45px 35px;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 90%;
+    width: 380px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.score-stars {
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+.score-content h3 {
+    font-size: 30px;
+    color: #e17055;
+    margin-bottom: 10px;
+}
+
+.score-content p {
+    font-size: 18px;
+    color: #636e72;
+    margin-bottom: 30px;
+}
+
+.recite-btn {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    color: white;
+    border: none;
+    padding: 16px 45px;
+    font-size: 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(116, 185, 255, 0.5);
+    transition: all 0.3s;
+}
+
+.recite-btn:active {
+    transform: scale(0.95);
+}
+
+/* 底部控制 */
+.controls {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.progress {
+    font-size: 22px;
+    color: #636e72;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.tips {
+    font-size: 16px;
+    color: #b2bec3;
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* 完成页面 */
+.finish-screen {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.finish-bears {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.finish-bears .bear {
+    font-size: 65px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.finish-text {
+    font-size: 20px;
+    color: #636e72;
+    margin: 15px 0 25px;
+}
+
+.finish-emojis {
+    font-size: 42px;
+    margin-bottom: 25px;
+    letter-spacing: 10px;
+}
+
+.total-score {
+    font-size: 24px;
+    color: #e17055;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.total-score span {
+    font-size: 36px;
+    color: #0984e3;
+}
+
+/* ===== 动画元素样式 ===== */
+
+/* 静夜思动画 */
+.moon-full {
+    font-size: 70px !important;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    animation: glow 2s ease-in-out infinite;
+}
+
+.moon-full-large {
+    font-size: 80px !important;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    animation: glow 2s ease-in-out infinite;
+}
+
+.moon-glow {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.star {
+    position: absolute;
+    animation: twinkle 1.5s ease-in-out infinite;
+    font-size: 20px;
+}
+
+.window-window {
+    font-size: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.light-beam {
+    width: 60px;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+    position: absolute;
+    bottom: 70px;
+    left: 45px;
+    animation: lightPulse 3s ease-in-out infinite;
+}
+
+.floor {
+    font-size: 40px;
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+}
+
+.frost {
+    font-size: 28px;
+    position: absolute;
+    animation: frostShimmer 2s ease-in-out infinite;
+}
+
+.floor-frost {
+    font-size: 45px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sparkle {
+    font-size: 22px;
+    position: absolute;
+    animation: twinkle 1s ease-in-out infinite;
+}
+
+.person-looking {
+    font-size: 55px;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+}
+
+.arrow-up {
+    font-size: 35px;
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+    animation: arrowMove 1.5s ease-in-out infinite;
+}
+
+.eye-look {
+    font-size: 30px;
+    position: absolute;
+    top: 50px;
+    left: 45px;
+}
+
+.thought-moon {
+    font-size: 25px;
+    position: absolute;
+    top: 40px;
+    right: 150px;
+}
+
+.cloud-night {
+    font-size: 35px;
+    position: absolute;
+    animation: moveCloud 10s ease-in-out infinite;
+}
+
+.person-head-down {
+    font-size: 55px;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    animation: headDown 2s ease-in-out infinite;
+}
+
+.tear {
+    font-size: 20px;
+    position: absolute;
+    animation: tearFall 1.5s ease-in-out infinite;
+}
+
+.home-memory {
+    font-size: 40px;
+    position: absolute;
+    top: 50px;
+    right: 150px;
+    animation: appear 2s ease-in-out infinite;
+}
+
+.thought-cloud {
+    font-size: 35px;
+    position: absolute;
+    top: 45px;
+    right: 180px;
+}
+
+.heart-sad {
+    font-size: 28px;
+    position: absolute;
+    bottom: 70px;
+    left: 60px;
+}
+
+.arrow-down {
+    font-size: 30px;
+    position: absolute;
+    bottom: 50px;
+    left: 55px;
+    animation: arrowMoveDown 1.5s ease-in-out infinite;
+}
+
+/* 春晓动画 */
+.sun-morning {
+    font-size: 55px;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    animation: sunRise 3s ease-out infinite;
+}
+
+.sun-rays-early {
+    font-size: 40px;
+    position: absolute;
+    top: 25px;
+    right: 45px;
+    animation: rotate 10s linear infinite;
+}
+
+.bed-sleeping {
+    font-size: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.person-sleep {
+    font-size: 45px;
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+}
+
+.zzz {
+    font-size: 25px;
+    position: absolute;
+    animation: zzzFloat 2s ease-in-out infinite;
+}
+
+.window-morning {
+    font-size: 45px;
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
+
+.curtain {
+    font-size: 45px;
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
+
+.bird-awake {
+    font-size: 30px;
+    position: absolute;
+    animation: birdPeek 1.5s ease-in-out infinite;
+}
+
+.sun-shining {
+    font-size: 50px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.bird-flying {
+    font-size: 32px;
+    position: absolute;
+    animation: flyAcross 4s ease-in-out infinite;
+}
+
+.tree-birds {
+    font-size: 50px;
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+}
+
+.note-music {
+    font-size: 28px;
+    position: absolute;
+    animation: noteFloat 2s ease-in-out infinite;
+}
+
+.cloud-sky {
+    font-size: 38px;
+    position: absolute;
+    animation: moveCloud 12s ease-in-out infinite;
+}
+
+.moon-rainy {
+    font-size: 45px;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+.cloud-rain {
+    font-size: 45px;
+    position: absolute;
+    animation: darkCloud 3s ease-in-out infinite;
+}
+
+.rain-drop {
+    font-size: 22px;
+    position: absolute;
+    animation: rainFall 0.8s linear infinite;
+}
+
+.tree-wind {
+    font-size: 50px;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    animation: treeShake 2s ease-in-out infinite;
+}
+
+.wind-line {
+    font-size: 35px;
+    position: absolute;
+    animation: windBlow 1s ease-in-out infinite;
+}
+
+.house-night {
+    font-size: 45px;
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+}
+
+.sun-gentle {
+    font-size: 48px;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+.flower-falling {
+    font-size: 35px;
+    position: absolute;
+    animation: flowerFall 3s ease-in-out infinite;
+}
+
+.petal {
+    font-size: 28px;
+    position: absolute;
+    animation: petalDrift 2.5s ease-in-out infinite;
+}
+
+.grass-ground {
+    font-size: 40px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ground-flowers {
+    font-size: 32px;
+    position: absolute;
+    bottom: 20px;
+}
+
+/* 咏鹅动画 */
+.goose-large {
+    font-size: 60px !important;
+    position: absolute;
+    animation: gooseSwim 3s ease-in-out infinite;
+}
+
+.water-lake {
+    font-size: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.water-wave {
+    font-size: 38px;
+    position: absolute;
+    animation: waveMove 1.5s ease-in-out infinite;
+}
+
+.reed-bank {
+    font-size: 40px;
+    position: absolute;
+    bottom: 15px;
+}
+
+.sun-pond {
+    font-size: 45px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.reflection {
+    font-size: 25px;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+.goose-singing {
+    font-size: 65px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: gooseSing 2s ease-in-out infinite;
+}
+
+.music-note {
+    font-size: 30px;
+    position: absolute;
+    animation: noteFloat 2s ease-in-out infinite;
+}
+
+.note-big {
+    font-size: 40px;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    animation: noteFloatBig 2.5s ease-in-out infinite;
+}
+
+.arrow-sing {
+    font-size: 35px;
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: arrowUp 1s ease-in-out infinite;
+}
+
+.mouth-open {
+    font-size: 35px;
+    position: absolute;
+    bottom: 55px;
+    left: 52%;
+    animation: mouthMove 0.5s ease-in-out infinite;
+}
+
+.sky-azure {
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+.cloud-white {
+    font-size: 35px;
+    position: absolute;
+    animation: moveCloud 10s ease-in-out infinite;
+}
+
+.water-blue {
+    font-size: 45px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.goose-floating {
+    font-size: 65px;
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: gooseFloat 2.5s ease-in-out infinite;
+}
+
+.feather {
+    font-size: 22px;
+    position: absolute;
+    animation: featherFloat 3s ease-in-out infinite;
+}
+
+.water-green {
+    font-size: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.water-ripple {
+    font-size: 28px;
+    position: absolute;
+    animation: ripple 1.5s ease-in-out infinite;
+}
+
+.leaf-water {
+    font-size: 30px;
+    position: absolute;
+    animation: leafFloat 2s ease-in-out infinite;
+}
+
+.lotus {
+    font-size: 35px;
+    position: absolute;
+    bottom: 15px;
+}
+
+.goose-swimming {
+    font-size: 65px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: gooseSwim2 2s ease-in-out infinite;
+}
+
+.foot-red {
+    font-size: 25px;
+    position: absolute;
+    animation: footPaddle 0.5s ease-in-out infinite;
+}
+
+.water-move {
+    font-size: 40px;
+    position: absolute;
+    animation: waveMove2 1.2s ease-in-out infinite;
+}
+
+.splash {
+    font-size: 28px;
+    position: absolute;
+    animation: splash 0.8s ease-in-out infinite;
+}
+
+.bubble {
+    font-size: 18px;
+    position: absolute;
+    animation: bubbleRise 2s ease-in-out infinite;
+}
+
+/* 登鹳雀楼动画 */
+.sun-setting-big {
+    font-size: 65px;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    animation: sunsetMove 5s ease-out infinite;
+}
+
+.sun-rays {
+    font-size: 45px;
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    animation: rotate 10s linear infinite;
+}
+
+.mountain-sunset {
+    font-size: 50px;
+    position: absolute;
+    bottom: 15px;
+}
+
+.horizon-line {
+    font-size: 35px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sky-orange {
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+.cloud-sunset {
+    font-size: 35px;
+    position: absolute;
+    animation: moveCloud 15s ease-in-out infinite;
+}
+
+.river-yellow {
+    font-size: 55px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.river-flow {
+    font-size: 45px;
+    position: absolute;
+    animation: riverMove 2s ease-in-out infinite;
+}
+
+.sea-water {
+    font-size: 50px;
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+}
+
+.fish {
+    font-size: 28px;
+    position: absolute;
+    animation: fishSwim 3s ease-in-out infinite;
+}
+
+.boat-river {
+    font-size: 45px;
+    position: absolute;
+    bottom: 35px;
+    left: 30%;
+    animation: boatFloat 3s ease-in-out infinite;
+}
+
+.mountain-river {
+    font-size: 45px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.tower-tall {
+    font-size: 60px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.person-on-tower {
+    font-size: 40px;
+    position: absolute;
+    top: 25px;
+    left: 55%;
+    animation: personStand 2s ease-in-out infinite;
+}
+
+.eye-looking {
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left: 57%;
+    animation: eyeMove 1.5s ease-in-out infinite;
+}
+
+.telescope {
+    font-size: 35px;
+    position: absolute;
+    top: 30px;
+    left: 58%;
+}
+
+.mountain-far {
+    font-size: 35px;
+    position: absolute;
+    bottom: 40px;
+}
+
+.arrow-see {
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    left: 62%;
+    animation: arrowExpand 1s ease-in-out infinite;
+}
+
+.distance-line {
+    font-size: 28px;
+    position: absolute;
+    top: 35px;
+    left: 65%;
+}
+
+.bird-high {
+    font-size: 30px;
+    position: absolute;
+    animation: birdFlyHigh 4s ease-in-out infinite;
+}
+
+.tower-multi {
+    font-size: 55px;
+    position: absolute;
+}
+
+.person-climbing {
+    font-size: 45px;
+    position: absolute;
+    animation: personClimb 3s ease-in-out infinite;
+}
+
+.arrow-up-up {
+    font-size: 35px;
+    position: absolute;
+    animation: arrowUpMove 1s ease-in-out infinite;
+}
+
+.stair-step {
+    font-size: 40px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.stars-night {
+    font-size: 22px;
+    position: absolute;
+    animation: twinkle 1.5s ease-in-out infinite;
+}
+
+.moon-tower {
+    font-size: 35px;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+/* 江雪动画 */
+.mountain-snow {
+    font-size: 48px;
+    position: absolute;
+}
+
+.snowfall {
+    font-size: 24px;
+    position: absolute;
+    animation: snowFall 3s linear infinite;
+}
+
+.empty-sky {
+    font-size: 40px;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
+.path-snow {
+    font-size: 40px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.footprint {
+    font-size: 25px;
+    position: absolute;
+    bottom: 30px;
+    animation: fadeOut 3s ease-in-out infinite;
+}
+
+.tree-snow {
+    font-size: 45px;
+    position: absolute;
+    bottom: 15px;
+}
+
+.snow-ground {
+    font-size: 50px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.lonely-path {
+    font-size: 40px;
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.boat-lone {
+    font-size: 50px;
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fisherman-hat {
+    font-size: 45px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hat-straw {
+    font-size: 35px;
+    position: absolute;
+    bottom: 60px;
+    left: 52%;
+}
+
+.raincoat-raincoat {
+    font-size: 40px;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fishing-rod {
+    font-size: 45px;
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.water-calm {
+    font-size: 42px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mist-fog {
+    font-size: 45px;
+    position: absolute;
+    animation: mistMove 4s ease-in-out infinite;
+}
+
+.boat-fishing {
+    font-size: 50px;
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: boatFishing 3s ease-in-out infinite;
+}
+
+.fisherman-sitting {
+    font-size: 45px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fishing-line {
+    font-size: 35px;
+    position: absolute;
+    bottom: 60px;
+    left: 52%;
+}
+
+.fish-biting {
+    font-size: 30px;
+    position: absolute;
+    bottom: 25px;
+    left: 55%;
+    animation: fishBite 2s ease-in-out infinite;
+}
+
+.snow-cold {
+    font-size: 22px;
+    position: absolute;
+    animation: snowFall 2.5s linear infinite;
+}
+
+.water-cold {
+    font-size: 40px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: waveMove 1.5s ease-in-out infinite;
+}
+
+.ice-float {
+    font-size: 30px;
+    position: absolute;
+    bottom: 20px;
+    animation: iceFloat 4s ease-in-out infinite;
+}
+
+.winter-tree {
+    font-size: 42px;
+    position: absolute;
+    bottom: 15px;
+}
+
+/* 悯农动画 */
+.sun-hot {
+    font-size: 65px;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    animation: sunHeat 2s ease-in-out infinite;
+}
+
+.sun-rays-hot {
+    font-size: 50px;
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    animation: rotate 8s linear infinite;
+}
+
+.farmer-work {
+    font-size: 60px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: farmerWork 2s ease-in-out infinite;
+}
+
+.tool-hoe {
+    font-size: 45px;
+    position: absolute;
+    bottom: 45px;
+    left: 52%;
+}
+
+.farmland {
+    font-size: 45px;
+    position: absolute;
+    bottom: 15px;
+}
+
+.sweat-drop {
+    font-size: 22px;
+    position: absolute;
+    animation: sweatDrip 1s ease-in-out infinite;
+}
+
+.ground-soil {
+    font-size: 55px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cloud-hot {
+    font-size: 35px;
+    position: absolute;
+    animation: moveCloudSlow 15s ease-in-out infinite;
+}
+
+.farmer-working {
+    font-size: 60px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sweat-big {
+    font-size: 25px;
+    position: absolute;
+    animation: sweatBig 0.8s ease-in-out infinite;
+}
+
+.crop-growing {
+    font-size: 40px;
+    position: absolute;
+    bottom: 20px;
+    left: 30%;
+    animation: cropGrow 2s ease-in-out infinite;
+}
+
+.soil-ground {
+    font-size: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.watering {
+    font-size: 25px;
+    position: absolute;
+    animation: waterDrop 1.5s ease-in-out infinite;
+}
+
+.plant-root {
+    font-size: 35px;
+    position: absolute;
+    bottom: 25px;
+    left: 35%;
+}
+
+.dirt-mound {
+    font-size: 40px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bowl-rice {
+    font-size: 55px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.plate-food {
+    font-size: 60px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rice-grain {
+    font-size: 28px;
+    position: absolute;
+    animation: riceDrop 1.5s ease-in-out infinite;
+}
+
+.chopsticks {
+    font-size: 45px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.table-dining {
+    font-size: 50px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.question-mark {
+    font-size: 40px;
+    position: absolute;
+    top: 25px;
+    left: 30%;
+    animation: questionAppear 1.5s ease-in-out infinite;
+}
+
+.thought-food {
+    font-size: 45px;
+    position: absolute;
+    top: 20px;
+    right: 30%;
+}
+
+.hand-holding {
+    font-size: 40px;
+    position: absolute;
+    bottom: 50px;
+    left: 55%;
+}
+
+.grain-field {
+    font-size: 48px;
+    position: absolute;
+    bottom: 15px;
+}
+
+.hard-work {
+    font-size: 40px;
+    position: absolute;
+    animation: muscleFlex 1s ease-in-out infinite;
+}
+
+.sun-setting-final {
+    font-size: 55px;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    animation: sunsetSlow 6s ease-out infinite;
+}
+
+.farmer-tired {
+    font-size: 55px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.heart-grateful {
+    font-size: 45px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+.grain-basket {
+    font-size: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: 30%;
+    animation: basketSwing 2s ease-in-out infinite;
+}
+
+.harvest-time {
+    font-size: 55px;
+    position: absolute;
+    bottom: 25px;
+    right: 25%;
+}
+
+/* ===== 动画关键帧 ===== */
+
+@keyframes glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.3; }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes lightPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+}
+
+@keyframes frostShimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+@keyframes arrowMove {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes arrowMoveDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+@keyframes headDown {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+}
+
+@keyframes tearFall {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(20px); }
+}
+
+@keyframes appear {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+@keyframes sunRise {
+    0% { transform: translateY(30px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes zzzFloat {
+    0%, 100% { transform: translateY(0) translateX(0); opacity: 1; }
+    50% { transform: translateY(-15px) translateX(10px); opacity: 0.5; }
+}
+
+@keyframes birdPeek {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes flyAcross {
+    0% { left: -50px; }
+    100% { left: 350px; }
+}
+
+@keyframes noteFloat {
+    0%, 100% { transform: translateY(0) rotate(-10deg); opacity: 1; }
+    50% { transform: translateY(-20px) rotate(10deg); opacity: 0.6; }
+}
+
+@keyframes moveCloud {
+    0% { left: -60px; }
+    100% { left: 380px; }
+}
+
+@keyframes darkCloud {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+}
+
+@keyframes rainFall {
+    0% { top: -20px; opacity: 1; }
+    100% { top: 220px; opacity: 0; }
+}
+
+@keyframes treeShake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
+
+@keyframes windBlow {
+    0% { transform: translateX(-10px); opacity: 0.6; }
+    100% { transform: translateX(20px); opacity: 0.3; }
+}
+
+@keyframes flowerFall {
+    0% { top: -30px; opacity: 1; }
+    100% { top: 220px; opacity: 0.5; }
+}
+
+@keyframes petalDrift {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(15px, -10px) rotate(180deg); }
+}
+
+@keyframes gooseSwim {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-8px); }
+}
+
+@keyframes waveMove {
+    0% { transform: translateX(-10px); }
+    100% { transform: translateX(10px); }
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+@keyframes gooseSing {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.05); }
+}
+
+@keyframes noteFloatBig {
+    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    50% { transform: translateY(-25px) rotate(15deg); opacity: 0.5; }
+}
+
+@keyframes arrowUp {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-8px); }
+}
+
+@keyframes mouthMove {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes gooseFloat {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-6px); }
+}
+
+@keyframes featherFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(90deg); }
+}
+
+@keyframes ripple {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.3); opacity: 0; }
+}
+
+@keyframes leafFloat {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(10px, -8px); }
+}
+
+@keyframes gooseSwim2 {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-5px); }
+}
+
+@keyframes footPaddle {
+    0% { transform: rotate(-15deg); }
+    100% { transform: rotate(15deg); }
+}
+
+@keyframes waveMove2 {
+    0% { transform: translateX(-8px); }
+    100% { transform: translateX(8px); }
+}
+
+@keyframes splash {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.6; }
+}
+
+@keyframes bubbleRise {
+    0% { bottom: 15px; opacity: 1; }
+    100% { bottom: 60px; opacity: 0; }
+}
+
+@keyframes sunsetMove {
+    0% { top: 20px; }
+    100% { top: 60px; }
+}
+
+@keyframes riverMove {
+    0%, 100% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+}
+
+@keyframes fishSwim {
+    0% { left: -30px; }
+    100% { left: 380px; }
+}
+
+@keyframes boatFloat {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(15px); }
+}
+
+@keyframes personStand {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes eyeMove {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes arrowExpand {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes birdFlyHigh {
+    0% { left: -40px; top: 30px; }
+    100% { left: 380px; top: 10px; }
+}
+
+@keyframes personClimb {
+    0% { bottom: 30px; }
+    50% { bottom: 50px; }
+    100% { bottom: 30px; }
+}
+
+@keyframes arrowUpMove {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes snowFall {
+    0% { top: -25px; }
+    100% { top: 235px; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes mistMove {
+    0%, 100% { opacity: 0.5; transform: translateX(0); }
+    50% { opacity: 0.8; transform: translateX(10px); }
+}
+
+@keyframes boatFishing {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-5px); }
+}
+
+@keyframes fishBite {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+}
+
+@keyframes iceFloat {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(15px); }
+}
+
+@keyframes sunHeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+@keyframes farmerWork {
+    0%, 100% { transform: translateX(-50%) rotate(0deg); }
+    50% { transform: translateX(-50%) rotate(5deg); }
+}
+
+@keyframes sweatDrip {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(15px); }
+}
+
+@keyframes moveCloudSlow {
+    0% { left: -80px; }
+    100% { left: 400px; }
+}
+
+@keyframes sweatBig {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(20px) scale(0.5); }
+}
+
+@keyframes cropGrow {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes waterDrop {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(18px); }
+}
+
+@keyframes riceDrop {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(16px); }
+}
+
+@keyframes questionAppear {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes muscleFlex {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes sunsetSlow {
+    0% { top: 15px; }
+    100% { top: 50px; }
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.15); }
+}
+
+@keyframes basketSwing {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        min-height: 94vh;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .character-intro {
+        gap: 25px;
+    }
+
+    .bear-body {
+        font-size: 65px;
+    }
+
+    .bear-name {
+        font-size: 20px;
+    }
+
+    .big-btn {
+        padding: 15px 40px;
+        font-size: 22px;
+    }
+
+    .animation-scene {
+        height: 180px;
+    }
+
+    .animation-scene > div {
+        font-size: 28px;
+    }
+
+    .current-line {
+        padding: 12px 15px;
+    }
+
+    .current-line .line-pinyin {
+        font-size: 14px;
+    }
+
+    .current-line .line-text {
+        font-size: 24px;
+    }
+
+    .poem-card {
+        padding: 14px 10px;
+    }
+
+    .poem-title .chinese {
+        font-size: 24px;
+    }
+
+    .poem-title .pinyin {
+        font-size: 11px;
+    }
+
+    .line-text {
+        font-size: 16px;
+    }
+
+    .line-pinyin {
+        font-size: 11px;
+    }
+
+    .poem-line {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .progress {
+        font-size: 18px;
+    }
+
+    .tips {
+        font-size: 14px;
+    }
+
+    .finish-bears .bear {
+        font-size: 50px;
+    }
+
+    .finish-emojis {
+        font-size: 32px;
+    }
+
+    .total-score {
+        font-size: 20px;
+    }
+
+    .total-score span {
+        font-size: 26px;
+    }
+
+    .recite-icon {
+        font-size: 60px;
+    }
+
+    .prompt-content,
+    .score-content {
+        padding: 30px 20px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        font-size: 26px;
+    }
+
+    .poem-title .chinese {
+        font-size: 20px;
+    }
+
+    .line-text {
+        font-size: 14px;
+    }
+
+    .line-pinyin {
+        font-size: 9px;
+    }
+
+    .current-line .line-text {
+        font-size: 20px;
+    }
+}

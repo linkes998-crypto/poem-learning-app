@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>跟着学古诗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <!-- 开始页面 -->
+        <div class="start-screen" id="startScreen">
+            <h1 class="title">🌸 跟着学古诗</h1>
+            <p class="subtitle">点击屏幕开始学习</p>
+            <div class="character-intro">
+                <div class="bear bear-xiongda">
+                    <div class="bear-body">🐻</div>
+                    <div class="bear-name">熊大</div>
+                </div>
+                <div class="bear bear-xionger">
+                    <div class="bear-body">🐻</div>
+                    <div class="bear-name">熊二</div>
+                </div>
+            </div>
+            <button id="startBtn" class="big-btn">开始学习</button>
+        </div>
+
+        <!-- 诗词学习页面 -->
+        <div class="poem-screen" id="poemScreen" style="display: none;">
+            <!-- 动画场景 - 逐句动画 -->
+            <div class="animation-scene" id="animationScene">
+                <!-- 动画元素将通过JS生成 -->
+            </div>
+
+            <!-- 当前诗句展示 -->
+            <div class="current-line" id="currentLine" style="display: none;">
+                <div class="line-pinyin" id="linePinyin"></div>
+                <div class="line-text" id="lineText"></div>
+            </div>
+
+            <!-- 诗词卡片 -->
+            <div class="poem-card" id="poemCard">
+                <div class="poem-header">
+                    <h2 class="poem-title" id="poemTitle">静夜思</h2>
+                    <p class="poem-author" id="poemAuthor">李白</p>
+                </div>
+                <div class="poem-divider"></div>
+                <div class="poem-content" id="poemContent">
+                    <!-- 诗词内容将通过JS生成 -->
+                </div>
+            </div>
+
+            <!-- 朗诵提示 -->
+            <div class="recite-prompt" id="recitePrompt" style="display: none;">
+                <div class="prompt-content">
+                    <div class="recite-icon">🎤</div>
+                    <h3>轮到你啦！</h3>
+                    <p>请跟着背诵这首诗</p>
+                    <button id="startReciteBtn" class="recite-btn">开始录音</button>
+                    <button id="stopReciteBtn" class="recite-btn" style="display: none;">停止录音</button>
+                </div>
+            </div>
+
+            <!-- 评分结果 -->
+            <div class="score-result" id="scoreResult" style="display: none;">
+                <div class="score-content">
+                    <div class="score-stars" id="scoreStars">⭐⭐⭐⭐⭐</div>
+                    <h3 id="scoreText">太棒了！</h3>
+                    <p id="scoreComment">发音很准确哦！</p>
+                    <button id="nextPoemBtn" class="recite-btn">下一首</button>
+                </div>
+            </div>
+
+            <!-- 底部控制 -->
+            <div class="controls">
+                <div class="progress" id="progress">
+                    <span id="currentNum">1</span> / <span id="totalNum">6</span>
+                </div>
+                <div class="tips" id="tips">💡 熊大熊二正在朗诵...</div>
+            </div>
+        </div>
+
+        <!-- 完成页面 -->
+        <div class="finish-screen" id="finishScreen" style="display: none;">
+            <div class="finish-bears">
+                <div class="bear bear-xiongda">🐻</div>
+                <div class="bear bear-xionger">🐻</div>
+            </div>
+            <h1 class="title">🎉 太棒了！</h1>
+            <p class="finish-text">你已经学会了所有古诗</p>
+            <div class="finish-emojis">🌸🌙🦢🏔️❄️🌾</div>
+            <div class="total-score">
+                总分：<span id="totalScore">0</span> / 30
+            </div>
+            <button id="restartBtn" class="big-btn">再学一次</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

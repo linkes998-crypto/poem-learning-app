@@ -27,26 +27,20 @@
 
         <!-- 诗词学习页面 -->
         <div class="poem-screen" id="poemScreen" style="display: none;">
-            <!-- 动画场景 - 逐句动画 -->
-            <div class="animation-scene" id="animationScene">
-                <!-- 动画元素将通过JS生成 -->
+            <!-- 动画场景 - 70% -->
+            <div class="animation-container" id="animationContainer">
+                <!-- 动画场景将通过JS生成 -->
             </div>
 
-            <!-- 当前诗句展示 -->
-            <div class="current-line" id="currentLine" style="display: none;">
-                <div class="line-pinyin" id="linePinyin"></div>
-                <div class="line-text" id="lineText"></div>
-            </div>
-
-            <!-- 诗词卡片 -->
-            <div class="poem-card" id="poemCard">
-                <div class="poem-header">
+            <!-- 诗词内容 - 30% -->
+            <div class="poem-container" id="poemContainer">
+                <div class="poem-info">
                     <h2 class="poem-title" id="poemTitle">静夜思</h2>
                     <p class="poem-author" id="poemAuthor">李白</p>
                 </div>
-                <div class="poem-divider"></div>
-                <div class="poem-content" id="poemContent">
-                    <!-- 诗词内容将通过JS生成 -->
+                <div class="current-line-box" id="currentLineBox">
+                    <div class="line-pinyin" id="linePinyin"></div>
+                    <div class="line-text" id="lineText"></div>
                 </div>
             </div>
 
@@ -71,9 +65,9 @@
                 </div>
             </div>
 
-            <!-- 底部控制 -->
-            <div class="controls">
-                <div class="progress" id="progress">
+            <!-- 底部进度 -->
+            <div class="progress-bar">
+                <div class="progress-text">
                     <span id="currentNum">1</span> / <span id="totalNum">6</span>
                 </div>
                 <div class="tips" id="tips">💡 熊大熊二正在朗诵...</div>

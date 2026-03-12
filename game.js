@@ -1,4 +1,4 @@
-// 古诗词数据（带拼音和每句动画配置）
+// 古诗词数据（带拼音和每句生动动画配置）
 const poems = [
     {
         id: 1,
@@ -13,16 +13,19 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #0c1445 0%, #1a237e 50%, #283593 100%)',
                     elements: `
-                        <div class="moon-full">🌕</div>
-                        <div class="moon-glow"></div>
-                        <div class="star star-1">✨</div>
-                        <div class="star star-2">✨</div>
-                        <div class="star star-3">✨</div>
-                        <div class="star star-4">✨</div>
-                        <div class="star star-5">✨</div>
-                        <div class="window-window">🪟</div>
-                        <div class="light-beam"></div>
-                        <div class="floor">🪵</div>
+                        <div class="scene-night">
+                            <div class="moon-glow">🌕</div>
+                            <div class="moon-rays"></div>
+                            <div class="star star-1">✨</div>
+                            <div class="star star-2">✨</div>
+                            <div class="star star-3">✨</div>
+                            <div class="star star-4">✨</div>
+                            <div class="star star-5">✨</div>
+                            <div class="window-frame">🪟</div>
+                            <div class="light-beam"></div>
+                            <div class="bed-sleep">🛏️</div>
+                            <div class="floor">🪵</div>
+                        </div>
                     `
                 }
             },
@@ -32,17 +35,22 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #0c1445 0%, #1a237e 50%, #37474f 100%)',
                     elements: `
-                        <div class="moon-full">🌕</div>
-                        <div class="moon-glow"></div>
-                        <div class="frost frost-1">❄️</div>
-                        <div class="frost frost-2">❄️</div>
-                        <div class="frost frost-3">❄️</div>
-                        <div class="frost frost-4">❄️</div>
-                        <div class="frost frost-5">❄️</div>
-                        <div class="floor-frost">⬜</div>
-                        <div class="sparkle sparkle-1">💫</div>
-                        <div class="sparkle sparkle-2">💫</div>
-                        <div class="sparkle sparkle-3">💫</div>
+                        <div class="scene-frost">
+                            <div class="moon-dim">🌕</div>
+                            <div class="moon-glow-dim"></div>
+                            <div class="frost frost-1">❄️</div>
+                            <div class="frost frost-2">❄️</div>
+                            <div class="frost frost-3">❄️</div>
+                            <div class="frost frost-4">❄️</div>
+                            <div class="frost frost-5">❄️</div>
+                            <div class="frost frost-6">❄️</div>
+                            <div class="frost frost-7">❄️</div>
+                            <div class="floor-frost">🟦</div>
+                            <div class="sparkle sparkle-1">💫</div>
+                            <div class="sparkle sparkle-2">💫</div>
+                            <div class="sparkle sparkle-3">💫</div>
+                            <div class="sparkle sparkle-4">💫</div>
+                        </div>
                     `
                 }
             },
@@ -52,14 +60,19 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #0d1b2a 0%, #1b263b 50%, #415a77 100%)',
                     elements: `
-                        <div class="moon-full-large">🌕</div>
-                        <div class="moon-rays">☀️</div>
-                        <div class="person-looking">👤</div>
-                        <div class="arrow-up">⬆️</div>
-                        <div class="eye-look">👀</div>
-                        <div class="thought-moon">🌕</div>
-                        <div class="cloud-night cloud-1">☁️</div>
-                        <div class="cloud-night cloud-2">☁️</div>
+                        <div class="scene-look-up">
+                            <div class="moon-bright">🌕</div>
+                            <div class="moon-shine"></div>
+                            <div class="person-head person-1">🧑</div>
+                            <div class="neck person-1">👕</div>
+                            <div class="arrow-look-up">⬆️</div>
+                            <div class="eyes-looking">👀</div>
+                            <div class="thought-moon">🌕</div>
+                            <div class="cloud-night cloud-1">☁️</div>
+                            <div class="cloud-night cloud-2">☁️</div>
+                            <div class="star-small star-1">⭐</div>
+                            <div class="star-small star-2">⭐</div>
+                        </div>
                     `
                 }
             },
@@ -69,14 +82,18 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #0d1b2a 0%, #1b263b 50%, #2c3e50 100%)',
                     elements: `
-                        <div class="moon-full">🌕</div>
-                        <div class="person-head-down">👤</div>
-                        <div class="tear tear-1">💧</div>
-                        <div class="tear tear-2">💧</div>
-                        <div class="home-memory">🏠</div>
-                        <div class="thought-cloud">💭</div>
-                        <div class="heart-sad">💔</div>
-                        <div class="arrow-down">⬇️</div>
+                        <div class="scene-look-down">
+                            <div class="moon-sad">🌕</div>
+                            <div class="person-head-down person-1">🧑</div>
+                            <div class="neck-down person-1">👕</div>
+                            <div class="tear tear-1">💧</div>
+                            <div class="tear tear-2">💧</div>
+                            <div class="home-memory">🏠</div>
+                            <div class="thought-cloud">💭</div>
+                            <div class="heart-sad">💔</div>
+                            <div class="arrow-look-down">⬇️</div>
+                            <div class="path-home">🛤️</div>
+                        </div>
                     `
                 }
             }
@@ -97,16 +114,20 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #ff9a9e 0%, #fecfef 50%, #ffecd2 100%)',
                     elements: `
-                        <div class="sun-morning">🌅</div>
-                        <div class="sun-rays-early">☀️</div>
-                        <div class="bed-sleeping">🛏️</div>
-                        <div class="person-sleep">😴</div>
-                        <div class="zzz zzz-1">💤</div>
-                        <div class="zzz zzz-2">💤</div>
-                        <div class="zzz zzz-3">💤</div>
-                        <div class="window-morning">🪟</div>
-                        <div class="curtain">🪟</div>
-                        <div class="bird-awake bird-1">🐦</div>
+                        <div class="scene-sleep">
+                            <div class="sun-rise">🌅</div>
+                            <div class="sun-rays-early"></div>
+                            <div class="bed-large">🛏️</div>
+                            <div class="person-sleep">😴</div>
+                            <div class="zzz zzz-1">💤</div>
+                            <div class="zzz zzz-2">💤</div>
+                            <div class="zzz zzz-3">💤</div>
+                            <div class="window-morning">🪟</div>
+                            <div class="curtain">🪟</div>
+                            <div class="bird-awake bird-1">🐦</div>
+                            <div class="dew dew-1">💧</div>
+                            <div class="dew dew-2">💧</div>
+                        </div>
                     `
                 }
             },
@@ -116,18 +137,22 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #a8edea 0%, #fed6e3 100%)',
                     elements: `
-                        <div class="sun-shining">☀️</div>
-                        <div class="bird-flying bird-1">🐦</div>
-                        <div class="bird-flying bird-2">🐦</div>
-                        <div class="bird-flying bird-3">🐦</div>
-                        <div class="bird-flying bird-4">🐦</div>
-                        <div class="bird-flying bird-5">🐦</div>
-                        <div class="tree-birds">🌳</div>
-                        <div class="note-music music-1">🎵</div>
-                        <div class="note-music music-2">🎵</div>
-                        <div class="note-music music-3">🎵</div>
-                        <div class="cloud-sky cloud-1">☁️</div>
-                        <div class="cloud-sky cloud-2">☁️</div>
+                        <div class="scene-birds">
+                            <div class="sun-bright">☀️</div>
+                            <div class="bird-flying bird-1">🐦</div>
+                            <div class="bird-flying bird-2">🐦</div>
+                            <div class="bird-flying bird-3">🐦</div>
+                            <div class="bird-flying bird-4">🐦</div>
+                            <div class="bird-flying bird-5">🐦</div>
+                            <div class="bird-flying bird-6">🐦</div>
+                            <div class="tree-birds">🌳</div>
+                            <div class="note-music music-1">🎵</div>
+                            <div class="note-music music-2">🎵</div>
+                            <div class="note-music music-3">🎵</div>
+                            <div class="note-music music-4">🎵</div>
+                            <div class="cloud-sky cloud-1">☁️</div>
+                            <div class="cloud-sky cloud-2">☁️</div>
+                        </div>
                     `
                 }
             },
@@ -137,19 +162,22 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #2c3e50 0%, #34495e 50%, #7f8c8d 100%)',
                     elements: `
-                        <div class="moon-rainy">🌙</div>
-                        <div class="cloud-rain cloud-1">🌧️</div>
-                        <div class="cloud-rain cloud-2">🌧️</div>
-                        <div class="rain-drop drop-1">💧</div>
-                        <div class="rain-drop drop-2">💧</div>
-                        <div class="rain-drop drop-3">💧</div>
-                        <div class="rain-drop drop-4">💧</div>
-                        <div class="rain-drop drop-5">💧</div>
-                        <div class="tree-wind">🌳</div>
-                        <div class="wind-line wind-1">〰️</div>
-                        <div class="wind-line wind-2">〰️</div>
-                        <div class="wind-line wind-3">〰️</div>
-                        <div class="house-night">🏠</div>
+                        <div class="scene-rain">
+                            <div class="moon-rainy">🌙</div>
+                            <div class="cloud-rain cloud-1">🌧️</div>
+                            <div class="cloud-rain cloud-2">🌧️</div>
+                            <div class="rain-drop drop-1">💧</div>
+                            <div class="rain-drop drop-2">💧</div>
+                            <div class="rain-drop drop-3">💧</div>
+                            <div class="rain-drop drop-4">💧</div>
+                            <div class="rain-drop drop-5">💧</div>
+                            <div class="rain-drop drop-6">💧</div>
+                            <div class="tree-wind">🌳</div>
+                            <div class="wind-line wind-1">〰️</div>
+                            <div class="wind-line wind-2">〰️</div>
+                            <div class="wind-line wind-3">〰️</div>
+                            <div class="house-night">🏠</div>
+                        </div>
                     `
                 }
             },
@@ -159,19 +187,22 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%)',
                     elements: `
-                        <div class="sun-gentle">🌤️</div>
-                        <div class="flower-falling flower-1">🌸</div>
-                        <div class="flower-falling flower-2">🌺</div>
-                        <div class="flower-falling flower-3">🌼</div>
-                        <div class="flower-falling flower-4">🌷</div>
-                        <div class="flower-falling flower-5">🌸</div>
-                        <div class="petal petal-1">🌸</div>
-                        <div class="petal petal-2">🌺</div>
-                        <div class="petal petal-3">🌼</div>
-                        <div class="grass-ground">🌿</div>
-                        <div class="ground-flowers ground-1">🌻</div>
-                        <div class="ground-flowers ground-2">🌹</div>
-                        <div class="ground-flowers ground-3">🌷</div>
+                        <div class="scene-flowers">
+                            <div class="sun-gentle">🌤️</div>
+                            <div class="flower-falling flower-1">🌸</div>
+                            <div class="flower-falling flower-2">🌺</div>
+                            <div class="flower-falling flower-3">🌼</div>
+                            <div class="flower-falling flower-4">🌷</div>
+                            <div class="flower-falling flower-5">🌸</div>
+                            <div class="flower-falling flower-6">🌺</div>
+                            <div class="petal petal-1">🌸</div>
+                            <div class="petal petal-2">🌺</div>
+                            <div class="petal petal-3">🌼</div>
+                            <div class="grass-ground">🌿</div>
+                            <div class="ground-flowers ground-1">🌻</div>
+                            <div class="ground-flowers ground-2">🌹</div>
+                            <div class="ground-flowers ground-3">🌷</div>
+                        </div>
                     `
                 }
             }
@@ -192,17 +223,20 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #87CEEB 0%, #4682B4 50%, #006994 100%)',
                     elements: `
-                        <div class="goose-large goose-1">🦢</div>
-                        <div class="goose-large goose-2">🦢</div>
-                        <div class="goose-large goose-3">🦢</div>
-                        <div class="water-lake">🌊</div>
-                        <div class="water-wave wave-1">〰️</div>
-                        <div class="water-wave wave-2">〰️</div>
-                        <div class="water-wave wave-3">〰️</div>
-                        <div class="reed-bank reed-1">🌾</div>
-                        <div class="reed-bank reed-2">🌾</div>
-                        <div class="sun-pond">☀️</div>
-                        <div class="reflection">🪞</div>
+                        <div class="scene-geese">
+                            <div class="goose-large goose-1">🦢</div>
+                            <div class="goose-large goose-2">🦢</div>
+                            <div class="goose-large goose-3">🦢</div>
+                            <div class="water-lake">🌊</div>
+                            <div class="water-wave wave-1">〰️</div>
+                            <div class="water-wave wave-2">〰️</div>
+                            <div class="water-wave wave-3">〰️</div>
+                            <div class="reed-bank reed-1">🌾</div>
+                            <div class="reed-bank reed-2">🌾</div>
+                            <div class="reed-bank reed-3">🌾</div>
+                            <div class="sun-pond">☀️</div>
+                            <div class="reflection">🪞</div>
+                        </div>
                     `
                 }
             },
@@ -212,17 +246,19 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #4FC3F7 0%, #29B6F6 50%, #03A9F4 100%)',
                     elements: `
-                        <div class="goose-singing">🦢</div>
-                        <div class="music-note note-1">🎵</div>
-                        <div class="music-note note-2">🎵</div>
-                        <div class="music-note note-3">🎵</div>
-                        <div class="note-big">🎶</div>
-                        <div class="arrow-sing">⬆️</div>
-                        <div class="mouth-open">👄</div>
-                        <div class="sky-azure">🌤️</div>
-                        <div class="cloud-white cloud-1">☁️</div>
-                        <div class="cloud-white cloud-2">☁️</div>
-                        <div class="water-blue">🌊</div>
+                        <div class="scene-singing">
+                            <div class="goose-singing">🦢</div>
+                            <div class="music-note note-1">🎵</div>
+                            <div class="music-note note-2">🎵</div>
+                            <div class="music-note note-3">🎵</div>
+                            <div class="note-big">🎶</div>
+                            <div class="arrow-sing">⬆️</div>
+                            <div class="mouth-open">👄</div>
+                            <div class="sky-azure">🌤️</div>
+                            <div class="cloud-white cloud-1">☁️</div>
+                            <div class="cloud-white cloud-2">☁️</div>
+                            <div class="water-blue">🌊</div>
+                        </div>
                     `
                 }
             },
@@ -232,18 +268,21 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #5C6BC0 0%, #42A5F5 50%, #26C6DA 100%)',
                     elements: `
-                        <div class="goose-floating">🦢</div>
-                        <div class="feather feather-1">⬜</div>
-                        <div class="feather feather-2">⬜</div>
-                        <div class="feather feather-3">⬜</div>
-                        <div class="water-green">🟢</div>
-                        <div class="water-ripple ripple-1">⭕</div>
-                        <div class="water-ripple ripple-2">⭕</div>
-                        <div class="water-ripple ripple-3">⭕</div>
-                        <div class="leaf-water leaf-1">🍃</div>
-                        <div class="leaf-water leaf-2">🍃</div>
-                        <div class="lotus lotus-1">🪷</div>
-                        <div class="lotus lotus-2">🪷</div>
+                        <div class="scene-floating">
+                            <div class="goose-floating">🦢</div>
+                            <div class="feather feather-1">⬜</div>
+                            <div class="feather feather-2">⬜</div>
+                            <div class="feather feather-3">⬜</div>
+                            <div class="feather feather-4">⬜</div>
+                            <div class="water-green">🟢</div>
+                            <div class="water-ripple ripple-1">⭕</div>
+                            <div class="water-ripple ripple-2">⭕</div>
+                            <div class="water-ripple ripple-3">⭕</div>
+                            <div class="leaf-water leaf-1">🍃</div>
+                            <div class="leaf-water leaf-2">🍃</div>
+                            <div class="lotus lotus-1">🪷</div>
+                            <div class="lotus lotus-2">🪷</div>
+                        </div>
                     `
                 }
             },
@@ -253,17 +292,19 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #66BB6A 0%, #4CAF50 50%, #43A047 100%)',
                     elements: `
-                        <div class="goose-swimming">🦢</div>
-                        <div class="foot-red foot-1">🔴</div>
-                        <div class="foot-red foot-2">🔴</div>
-                        <div class="water-move wave-1">〰️</div>
-                        <div class="water-move wave-2">〰️</div>
-                        <div class="water-move wave-3">〰️</div>
-                        <div class="splash splash-1">💦</div>
-                        <div class="splash splash-2">💦</div>
-                        <div class="bubble bubble-1">⚪</div>
-                        <div class="bubble bubble-2">⚪</div>
-                        <div class="bubble bubble-3">⚪</div>
+                        <div class="scene-swimming">
+                            <div class="goose-swimming">🦢</div>
+                            <div class="foot-red foot-1">🔴</div>
+                            <div class="foot-red foot-2">🔴</div>
+                            <div class="water-move wave-1">〰️</div>
+                            <div class="water-move wave-2">〰️</div>
+                            <div class="water-move wave-3">〰️</div>
+                            <div class="splash splash-1">💦</div>
+                            <div class="splash splash-2">💦</div>
+                            <div class="bubble bubble-1">⚪</div>
+                            <div class="bubble bubble-2">⚪</div>
+                            <div class="bubble bubble-3">⚪</div>
+                        </div>
                     `
                 }
             }
@@ -284,15 +325,17 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #FF8A65 0%, #FF7043 50%, #FF5722 100%)',
                     elements: `
-                        <div class="sun-setting-big">🌅</div>
-                        <div class="sun-rays">☀️</div>
-                        <div class="mountain-sunset mountain-1">🏔️</div>
-                        <div class="mountain-sunset mountain-2">⛰️</div>
-                        <div class="mountain-sunset mountain-3">🗻</div>
-                        <div class="horizon-line">━━━</div>
-                        <div class="sky-orange">🌄</div>
-                        <div class="cloud-sunset cloud-1">☁️</div>
-                        <div class="cloud-sunset cloud-2">☁️</div>
+                        <div class="scene-sunset">
+                            <div class="sun-setting-big">🌅</div>
+                            <div class="sun-rays"></div>
+                            <div class="mountain-sunset mountain-1">🏔️</div>
+                            <div class="mountain-sunset mountain-2">⛰️</div>
+                            <div class="mountain-sunset mountain-3">🗻</div>
+                            <div class="horizon-line">━━━</div>
+                            <div class="sky-orange">🌄</div>
+                            <div class="cloud-sunset cloud-1">☁️</div>
+                            <div class="cloud-sunset cloud-2">☁️</div>
+                        </div>
                     `
                 }
             },
@@ -302,17 +345,20 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #4A90D9 0%, #2980B9 50%, #1A5276 100%)',
                     elements: `
-                        <div class="river-yellow">🟡</div>
-                        <div class="river-flow river-1">🌊</div>
-                        <div class="river-flow river-2">🌊</div>
-                        <div class="river-flow river-3">🌊</div>
-                        <div class="sea-water">🌊</div>
-                        <div class="fish fish-1">🐟</div>
-                        <div class="fish fish-2">🐟</div>
-                        <div class="fish fish-3">🐟</div>
-                        <div class="boat-river">⛵</div>
-                        <div class="mountain-river mountain-1">🏔️</div>
-                        <div class="mountain-river mountain-2">⛰️</div>
+                        <div class="scene-river">
+                            <div class="river-yellow">🟡</div>
+                            <div class="river-flow river-1">🌊</div>
+                            <div class="river-flow river-2">🌊</div>
+                            <div class="river-flow river-3">🌊</div>
+                            <div class="river-flow river-4">🌊</div>
+                            <div class="sea-water">🌊</div>
+                            <div class="fish fish-1">🐟</div>
+                            <div class="fish fish-2">🐟</div>
+                            <div class="fish fish-3">🐟</div>
+                            <div class="boat-river">⛵</div>
+                            <div class="mountain-river mountain-1">🏔️</div>
+                            <div class="mountain-river mountain-2">⛰️</div>
+                        </div>
                     `
                 }
             },
@@ -322,17 +368,19 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #5C6BC0 0%, #7E57C2 50%, #9575CD 100%)',
                     elements: `
-                        <div class="tower-tall">🏯</div>
-                        <div class="person-on-tower">👤</div>
-                        <div class="eye-looking">👀</div>
-                        <div class="telescope">🔭</div>
-                        <div class="mountain-far mountain-1">🏔️</div>
-                        <div class="mountain-far mountain-2">⛰️</div>
-                        <div class="mountain-far mountain-3">🗻</div>
-                        <div class="arrow-see">👁️</div>
-                        <div class="distance-line">━━━━━━</div>
-                        <div class="bird-high bird-1">🦅</div>
-                        <div class="bird-high bird-2">🦅</div>
+                        <div class="scene-look-far">
+                            <div class="tower-tall">🏯</div>
+                            <div class="person-on-tower">🧑</div>
+                            <div class="eye-looking">👀</div>
+                            <div class="telescope">🔭</div>
+                            <div class="mountain-far mountain-1">🏔️</div>
+                            <div class="mountain-far mountain-2">⛰️</div>
+                            <div class="mountain-far mountain-3">🗻</div>
+                            <div class="arrow-see">👁️</div>
+                            <div class="distance-line">━━━━━━</div>
+                            <div class="bird-high bird-1">🦅</div>
+                            <div class="bird-high bird-2">🦅</div>
+                        </div>
                     `
                 }
             },
@@ -342,16 +390,19 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #1A237E 0%, #283593 50%, #3949AB 100%)',
                     elements: `
-                        <div class="tower-multi tower-1">🏯</div>
-                        <div class="tower-multi tower-2">🏯</div>
-                        <div class="tower-multi tower-3">🏯</div>
-                        <div class="person-climbing">🧗</div>
-                        <div class="arrow-up-up">⬆️</div>
-                        <div class="stair-step">🪜</div>
-                        <div class="stars-night star-1">⭐</div>
-                        <div class="stars-night star-2">⭐</div>
-                        <div class="stars-night star-3">⭐</div>
-                        <div class="moon-tower">🌙</div>
+                        <div class="scene-climb">
+                            <div class="tower-multi tower-1">🏯</div>
+                            <div class="tower-multi tower-2">🏯</div>
+                            <div class="tower-multi tower-3">🏯</div>
+                            <div class="person-climbing">🧗</div>
+                            <div class="arrow-up-up">⬆️</div>
+                            <div class="stair-step">🪜</div>
+                            <div class="stars-night star-1">⭐</div>
+                            <div class="stars-night star-2">⭐</div>
+                            <div class="stars-night star-3">⭐</div>
+                            <div class="stars-night star-4">⭐</div>
+                            <div class="moon-tower">🌙</div>
+                        </div>
                     `
                 }
             }
@@ -372,17 +423,20 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #B0C4DE 0%, #87CEEB 50%, #B0E0E6 100%)',
                     elements: `
-                        <div class="mountain-snow mountain-1">🏔️</div>
-                        <div class="mountain-snow mountain-2">⛰️</div>
-                        <div class="mountain-snow mountain-3">🗻</div>
-                        <div class="mountain-snow mountain-4">🏔️</div>
-                        <div class="snowfall snow-1">❄️</div>
-                        <div class="snowfall snow-2">❄️</div>
-                        <div class="snowfall snow-3">❄️</div>
-                        <div class="snowfall snow-4">❄️</div>
-                        <div class="snowfall snow-5">❄️</div>
-                        <div class="bird-gone bird-1">🕊️</div>
-                        <div class="empty-sky">🌥️</div>
+                        <div class="scene-snow-mountains">
+                            <div class="mountain-snow mountain-1">🏔️</div>
+                            <div class="mountain-snow mountain-2">⛰️</div>
+                            <div class="mountain-snow mountain-3">🗻</div>
+                            <div class="mountain-snow mountain-4">🏔️</div>
+                            <div class="snowfall snow-1">❄️</div>
+                            <div class="snowfall snow-2">❄️</div>
+                            <div class="snowfall snow-3">❄️</div>
+                            <div class="snowfall snow-4">❄️</div>
+                            <div class="snowfall snow-5">❄️</div>
+                            <div class="snowfall snow-6">❄️</div>
+                            <div class="bird-gone bird-1">🕊️</div>
+                            <div class="empty-sky">🌥️</div>
+                        </div>
                     `
                 }
             },
@@ -392,18 +446,21 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #CFD8DC 0%, #B0BEC5 50%, #90A4AE 100%)',
                     elements: `
-                        <div class="path-snow path-1">━━━</div>
-                        <div class="path-snow path-2">━━━</div>
-                        <div class="path-snow path-3">━━━</div>
-                        <div class="footprint footprint-1">👣</div>
-                        <div class="footprint footprint-2">👣</div>
-                        <div class="footprint footprint-3">👣</div>
-                        <div class="tree-snow tree-1">🌲</div>
-                        <div class="tree-snow tree-2">🌲</div>
-                        <div class="tree-snow tree-3">🌲</div>
-                        <div class="snow-ground snow-1">⬜</div>
-                        <div class="snow-ground snow-2">⬜</div>
-                        <div class="lonely-path">🚶</div>
+                        <div class="scene-snow-path">
+                            <div class="path-snow path-1">━━━</div>
+                            <div class="path-snow path-2">━━━</div>
+                            <div class="path-snow path-3">━━━</div>
+                            <div class="footprint footprint-1">👣</div>
+                            <div class="footprint footprint-2">👣</div>
+                            <div class="footprint footprint-3">👣</div>
+                            <div class="footprint footprint-4">👣</div>
+                            <div class="tree-snow tree-1">🌲</div>
+                            <div class="tree-snow tree-2">🌲</div>
+                            <div class="tree-snow tree-3">🌲</div>
+                            <div class="snow-ground snow-1">⬜</div>
+                            <div class="snow-ground snow-2">⬜</div>
+                            <div class="lonely-path">🚶</div>
+                        </div>
                     `
                 }
             },
@@ -413,16 +470,19 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #78909C 0%, #607D8B 50%, #546E7A 100%)',
                     elements: `
-                        <div class="boat-lone">⛵</div>
-                        <div class="fisherman-hat">👴</div>
-                        <div class="hat-straw">🎩</div>
-                        <div class="raincoat-raincoat">🧥</div>
-                        <div class="fishing-rod">🎣</div>
-                        <div class="water-calm wave-1">〰️</div>
-                        <div class="water-calm wave-2">〰️</div>
-                        <div class="mist-fog">🌫️</div>
-                        <div class="reed-bank reed-1">🌾</div>
-                        <div class="reed-bank reed-2">🌾</div>
+                        <div class="scene-boat-alone">
+                            <div class="boat-lone">⛵</div>
+                            <div class="fisherman-hat">👴</div>
+                            <div class="hat-straw">🎩</div>
+                            <div class="raincoat-raincoat">🧥</div>
+                            <div class="fishing-rod">🎣</div>
+                            <div class="water-calm wave-1">〰️</div>
+                            <div class="water-calm wave-2">〰️</div>
+                            <div class="mist-fog">🌫️</div>
+                            <div class="reed-bank reed-1">🌾</div>
+                            <div class="reed-bank reed-2">🌾</div>
+                            <div class="reed-bank reed-3">🌾</div>
+                        </div>
                     `
                 }
             },
@@ -432,18 +492,21 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #546E7A 0%, #455A64 50%, #37474F 100%)',
                     elements: `
-                        <div class="boat-fishing">⛵</div>
-                        <div class="fisherman-sitting">👴</div>
-                        <div class="fishing-line">🎣</div>
-                        <div class="fish-biting">🐟</div>
-                        <div class="snow-cold snow-1">❄️</div>
-                        <div class="snow-cold snow-2">❄️</div>
-                        <div class="snow-cold snow-3">❄️</div>
-                        <div class="water-cold wave-1">〰️</div>
-                        <div class="water-cold wave-2">〰️</div>
-                        <div class="ice-float">🧊</div>
-                        <div class="winter-tree tree-1">🌲</div>
-                        <div class="winter-tree tree-2">🌲</div>
+                        <div class="scene-fishing-snow">
+                            <div class="boat-fishing">⛵</div>
+                            <div class="fisherman-sitting">👴</div>
+                            <div class="fishing-line">🎣</div>
+                            <div class="fish-biting">🐟</div>
+                            <div class="snow-cold snow-1">❄️</div>
+                            <div class="snow-cold snow-2">❄️</div>
+                            <div class="snow-cold snow-3">❄️</div>
+                            <div class="snow-cold snow-4">❄️</div>
+                            <div class="water-cold wave-1">〰️</div>
+                            <div class="water-cold wave-2">〰️</div>
+                            <div class="ice-float">🧊</div>
+                            <div class="winter-tree tree-1">🌲</div>
+                            <div class="winter-tree tree-2">🌲</div>
+                        </div>
                     `
                 }
             }
@@ -464,19 +527,22 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #FFF176 0%, #FFEE58 50%, #FDD835 100%)',
                     elements: `
-                        <div class="sun-hot">🌞</div>
-                        <div class="sun-rays-hot">☀️</div>
-                        <div class="farmer-work">👨‍🌾</div>
-                        <div class="tool-hoe">🌱</div>
-                        <div class="farmland farm-1">🌾</div>
-                        <div class="farmland farm-2">🌾</div>
-                        <div class="farmland farm-3">🌾</div>
-                        <div class="sweat-drop sweat-1">💦</div>
-                        <div class="sweat-drop sweat-2">💦</div>
-                        <div class="sweat-drop sweat-3">💦</div>
-                        <div class="ground-soil">🟫</div>
-                        <div class="cloud-hot cloud-1">☁️</div>
-                        <div class="cloud-hot cloud-2">☁️</div>
+                        <div class="scene-farm-hot">
+                            <div class="sun-hot">🌞</div>
+                            <div class="sun-rays-hot"></div>
+                            <div class="farmer-work">👨‍🌾</div>
+                            <div class="tool-hoe">🌱</div>
+                            <div class="farmland farm-1">🌾</div>
+                            <div class="farmland farm-2">🌾</div>
+                            <div class="farmland farm-3">🌾</div>
+                            <div class="farmland farm-4">🌾</div>
+                            <div class="sweat-drop sweat-1">💦</div>
+                            <div class="sweat-drop sweat-2">💦</div>
+                            <div class="sweat-drop sweat-3">💦</div>
+                            <div class="ground-soil">🟫</div>
+                            <div class="cloud-hot cloud-1">☁️</div>
+                            <div class="cloud-hot cloud-2">☁️</div>
+                        </div>
                     `
                 }
             },
@@ -486,17 +552,20 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #FFE082 0%, #FFCA28 50%, #FFB300 100%)',
                     elements: `
-                        <div class="farmer-working">👨‍🌾</div>
-                        <div class="sweat-big sweat-1">💧</div>
-                        <div class="sweat-big sweat-2">💧</div>
-                        <div class="sweat-big sweat-3">💧</div>
-                        <div class="sweat-big sweat-4">💧</div>
-                        <div class="sweat-big sweat-5">💧</div>
-                        <div class="crop-growing">🌱</div>
-                        <div class="soil-ground">🟤</div>
-                        <div class="watering">💧</div>
-                        <div class="plant-root">🌿</div>
-                        <div class="dirt-mound">⛰️</div>
+                        <div class="scene-sweat">
+                            <div class="farmer-working">👨‍🌾</div>
+                            <div class="sweat-big sweat-1">💧</div>
+                            <div class="sweat-big sweat-2">💧</div>
+                            <div class="sweat-big sweat-3">💧</div>
+                            <div class="sweat-big sweat-4">💧</div>
+                            <div class="sweat-big sweat-5">💧</div>
+                            <div class="crop-growing">🌱</div>
+                            <div class="soil-ground">🟤</div>
+                            <div class="watering">💧</div>
+                            <div class="plant-root">🌿</div>
+                            <div class="dirt-mound">⛰️</div>
+                            <div class="grass-patch">🌿</div>
+                        </div>
                     `
                 }
             },
@@ -506,16 +575,18 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #FFCCBC 0%, #FFAB91 50%, #FF8A65 100%)',
                     elements: `
-                        <div class="bowl-rice">🍚</div>
-                        <div class="plate-food">🍽️</div>
-                        <div class="rice-grain grain-1">🍚</div>
-                        <div class="rice-grain grain-2">🍚</div>
-                        <div class="rice-grain grain-3">🍚</div>
-                        <div class="chopsticks">🥢</div>
-                        <div class="table-dining">🪵</div>
-                        <div class="question-mark">❓</div>
-                        <div class="thought-food">💭</div>
-                        <div class="hand-holding">🖐️</div>
+                        <div class="scene-meal">
+                            <div class="bowl-rice">🍚</div>
+                            <div class="plate-food">🍽️</div>
+                            <div class="rice-grain grain-1">🍚</div>
+                            <div class="rice-grain grain-2">🍚</div>
+                            <div class="rice-grain grain-3">🍚</div>
+                            <div class="chopsticks">🥢</div>
+                            <div class="table-dining">🪵</div>
+                            <div class="question-mark">❓</div>
+                            <div class="thought-food">💭</div>
+                            <div class="hand-holding">🖐️</div>
+                        </div>
                     `
                 }
             },
@@ -525,17 +596,19 @@ const poems = [
                 animation: {
                     background: 'linear-gradient(to bottom, #DCEDC8 0%, #C5E1A5 50%, #AED581 100%)',
                     elements: `
-                        <div class="grain-field grain-1">🌾</div>
-                        <div class="grain-field grain-2">🌾</div>
-                        <div class="grain-field grain-3">🌾</div>
-                        <div class="grain-field grain-4">🌾</div>
-                        <div class="hard-work work-1">💪</div>
-                        <div class="hard-work work-2">💪</div>
-                        <div class="sun-setting-final">🌅</div>
-                        <div class="farmer-tired">😓</div>
-                        <div class="heart-grateful">❤️</div>
-                        <div class="grain-basket">🧺</div>
-                        <div class="harvest-time">🌾</div>
+                        <div class="scene-harvest">
+                            <div class="grain-field grain-1">🌾</div>
+                            <div class="grain-field grain-2">🌾</div>
+                            <div class="grain-field grain-3">🌾</div>
+                            <div class="grain-field grain-4">🌾</div>
+                            <div class="hard-work work-1">💪</div>
+                            <div class="hard-work work-2">💪</div>
+                            <div class="sun-setting-final">🌅</div>
+                            <div class="farmer-tired">😓</div>
+                            <div class="heart-grateful">❤️</div>
+                            <div class="grain-basket">🧺</div>
+                            <div class="harvest-time">🌾</div>
+                        </div>
                     `
                 }
             }
@@ -568,13 +641,12 @@ const startReciteBtn = document.getElementById('startReciteBtn');
 const stopReciteBtn = document.getElementById('stopReciteBtn');
 const nextPoemBtn = document.getElementById('nextPoemBtn');
 
-const animationScene = document.getElementById('animationScene');
-const currentLine = document.getElementById('currentLine');
-const linePinyin = document.getElementById('linePinyin');
-const lineText = document.getElementById('lineText');
+const animationContainer = document.getElementById('animationContainer');
+const poemContainer = document.getElementById('poemContainer');
 const poemTitle = document.getElementById('poemTitle');
 const poemAuthor = document.getElementById('poemAuthor');
-const poemContent = document.getElementById('poemContent');
+const linePinyin = document.getElementById('linePinyin');
+const lineText = document.getElementById('lineText');
 const currentNum = document.getElementById('currentNum');
 const totalNum = document.getElementById('totalNum');
 const tips = document.getElementById('tips');
@@ -629,12 +701,10 @@ function calculateScore(userText) {
     const poem = poems[gameState.currentIndex];
     const poemText = poem.lines.map(line => line.text).join('');
     
-    // 简单的相似度计算
     let score = 0;
     const userChars = userText.replace(/[^\u4e00-\u9fa5]/g, '');
     const poemChars = poemText.replace(/[^\u4e00-\u9fa5]/g, '');
     
-    // 计算匹配的字符数
     let matchCount = 0;
     for (let char of poemChars) {
         if (userChars.includes(char)) {
@@ -642,7 +712,6 @@ function calculateScore(userText) {
         }
     }
     
-    // 计算分数（最高5分）
     const matchRate = matchCount / poemChars.length;
     score = Math.min(5, Math.ceil(matchRate * 5));
     
@@ -654,10 +723,8 @@ function showScoreResult(score) {
     recitePrompt.style.display = 'none';
     scoreResult.style.display = 'flex';
     
-    // 更新星星
     scoreStars.textContent = '⭐'.repeat(score) + '☆'.repeat(5 - score);
     
-    // 更新评语
     const comments = {
         5: ['太棒了！', '发音很准确哦！'],
         4: ['很好！', '再努力一点点就完美了！'],
@@ -671,7 +738,6 @@ function showScoreResult(score) {
     scoreText.textContent = comment[0];
     scoreComment.textContent = comment[1];
     
-    // 更新总分
     gameState.totalScore += score;
 }
 
@@ -680,14 +746,12 @@ function showLineAnimation(lineIndex, poem) {
     const line = poem.lines[lineIndex];
     const anim = line.animation;
     
-    animationScene.style.background = anim.background;
-    animationScene.innerHTML = anim.elements;
-    animationScene.className = 'animation-scene line-' + lineIndex;
+    animationContainer.style.background = anim.background;
+    animationContainer.innerHTML = anim.elements;
+    animationContainer.className = 'animation-container';
     
-    // 显示当前诗句
     linePinyin.textContent = line.pinyin;
     lineText.textContent = line.text;
-    currentLine.style.display = 'block';
 }
 
 // 显示诗词
@@ -696,7 +760,6 @@ function showPoem(index) {
     gameState.currentLineIndex = 0;
     gameState.isReadingLines = true;
     
-    // 更新标题和作者
     poemTitle.innerHTML = `
         <span class="pinyin">${poem.titlePinyin}</span>
         <span class="chinese">${poem.title}</span>
@@ -706,19 +769,9 @@ function showPoem(index) {
         <span class="chinese">-${poem.author}</span>
     `;
     
-    // 更新诗句内容
-    poemContent.innerHTML = poem.lines.map((line, i) => `
-        <div class="poem-line" data-line="${i}">
-            <div class="line-pinyin">${line.pinyin}</div>
-            <div class="line-text">${line.text}</div>
-        </div>
-    `).join('');
-    
-    // 更新进度
     currentNum.textContent = index + 1;
     totalNum.textContent = poems.length;
     
-    // 开始逐句朗读和动画
     setTimeout(() => {
         readLinesOneByOne(poem);
     }, 500);
@@ -727,28 +780,15 @@ function showPoem(index) {
 // 逐句朗读诗词（熊大熊二风格）
 function readLinesOneByOne(poem) {
     if (gameState.currentLineIndex >= poem.lines.length) {
-        // 所有诗句读完了
         showRecitePrompt();
         return;
     }
     
     const line = poem.lines[gameState.currentLineIndex];
     
-    // 显示当前句的动画
     showLineAnimation(gameState.currentLineIndex, poem);
     
-    // 高亮当前句
-    document.querySelectorAll('.poem-line').forEach((lineEl, i) => {
-        if (i === gameState.currentLineIndex) {
-            lineEl.classList.add('active');
-        } else {
-            lineEl.classList.remove('active');
-        }
-    });
-    
-    // 朗读当前句
     speakLineWithBearVoice(line.text, () => {
-        // 朗读完成后，停顿一下，然后读下一句
         setTimeout(() => {
             gameState.currentLineIndex++;
             readLinesOneByOne(poem);
@@ -767,11 +807,10 @@ function speakLineWithBearVoice(text, callback) {
     
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'zh-CN';
-    utterance.rate = 0.75; // 稍慢，更亲切
-    utterance.pitch = 0.9; // 稍低，模仿熊的声音
+    utterance.rate = 0.75;
+    utterance.pitch = 0.9;
     utterance.volume = 1.0;
     
-    // 尝试使用更自然的男声
     const voices = window.speechSynthesis.getVoices();
     const maleVoice = voices.find(voice => 
         voice.lang.includes('zh-CN') && 
@@ -796,7 +835,6 @@ function speakLineWithBearVoice(text, callback) {
 // 显示背诵提示
 function showRecitePrompt() {
     gameState.isReadingLines = false;
-    currentLine.style.display = 'none';
     recitePrompt.style.display = 'flex';
     tips.textContent = '💡 轮到你背诵啦！';
 }
@@ -829,7 +867,6 @@ function stopRecording() {
 // 下一首
 function nextPoem() {
     scoreResult.style.display = 'none';
-    currentLine.style.display = 'none';
     
     gameState.currentIndex++;
     
@@ -845,10 +882,8 @@ function showFinishScreen() {
     poemScreen.style.display = 'none';
     finishScreen.style.display = 'block';
     
-    // 显示总分
     totalScore.textContent = gameState.totalScore;
     
-    // 停止朗读
     if (window.speechSynthesis) {
         window.speechSynthesis.cancel();
     }
@@ -889,7 +924,6 @@ nextPoemBtn.addEventListener('click', nextPoem);
 window.addEventListener('load', () => {
     initSpeechRecognition();
     
-    // 预加载语音合成
     if (window.speechSynthesis) {
         window.speechSynthesis.getVoices();
     }
